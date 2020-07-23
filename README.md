@@ -20,9 +20,9 @@
 
 ### 會員系統 (CRUD)<br />
 協作者：#LucianoKJ
-+ 登入頁 <br /> 
-+ 忘記密碼 <br />
-+ 預先儲存付款資訊 <br /> 
++ 登入頁（會員檢查）<br /> 
++ 忘記密碼（gmail寄信）<br />
++ 預先儲存付款資訊（格式驗證）<br /> 
 + 帳戶資訊<br/>
    <img src="https://github.com/YiChengChen0608/InSense/blob/master/public/images/readmeImg/%E5%B8%B3%E6%88%B6%E8%B3%87%E8%A8%8A.png" width="720" /><br /> 
 
