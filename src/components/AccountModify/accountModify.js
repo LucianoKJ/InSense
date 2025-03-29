@@ -410,6 +410,7 @@ const AccountModify = (props) => {
                 value={email}
                 handleChange={handleChange}
                 label="email"
+                disabled
               />
             </div>
           </div>

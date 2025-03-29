@@ -14,6 +14,8 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 
+import addressJSON from "../../constants/address.json";
+
 //Select CSS(material UI)
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -73,12 +75,7 @@ const Address = (props) => {
 
   //取得縣市資料
   const getCities = async () => {
-    const response = await fetch(
-      "http://localhost:3000/data/address.json"
-    );
-
-    // console.log(response)
-    const obj = await response.json();
+    const obj = addressJSON
 
     // console.log(obj);
     return obj;
