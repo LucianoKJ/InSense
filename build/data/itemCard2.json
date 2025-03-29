@@ -1,0 +1,97 @@
+{
+    "id": 2,
+    "title": "CHANEL",
+    "brandName": "chanel",
+    "items": [
+        {
+            "id": 31,
+            "name": "CHANEL N°5典藏香水",
+            "src": "/images/items/P0031.png",
+            "price": "NT$4800"
+        },
+        {
+            "id": 32,
+            "name": "CHANEL N°5 L'EAU清新晨露淡香水",
+            "src": "/images/items/P0032.png",
+            "price": "NT$4800"
+        },
+        {
+            "id": 33,
+            "name": "CHANEL CHANCE 綠色氣息淡香水",
+            "src": "/images/items/P0033.png",
+            "price": "NT$3280"
+        },
+        {
+            "id": 34,
+            "name": "CHANEL CHANCE 粉紅甜蜜香水",
+            "src": "/images/items/P0034.png",
+            "price": "NT$3280"
+        },
+        {
+            "id": 35,
+            "name": "CHANEL GABRIELLE 嘉柏麗香水",
+            "src": "/images/items/P0035.png",
+            "price": "NT$5600"
+        },
+        {
+            "id": 36,
+            "name": "CHANEL GABRIELLE  ESSENCE 嘉柏麗琉金香水",
+            "src": "/images/items/P0036.png",
+            "price": "NT$5600"
+        },
+        {
+            "id": 37,
+            "name": "CHANEL 摩登COCO香水隨身瓶",
+            "src": "/images/items/P0037.png",
+            "price": "NT$4600"
+        },
+        {
+            "id": 38,
+            "name": "CHANEL 摩登COCO隔離髮香噴霧",
+            "src": "/images/items/P0038.png",
+            "price": "NT$1560"
+        },
+        {
+            "id": 39,
+            "name": "CHANEL CHANCE 隨身香氛筆",
+            "src": "/images/items/P0039.png",
+            "price": "NT$2600"
+        },
+        {
+            "id": 40,
+            "name": "CHANEL GABRIELLE 嘉柏麗沐浴精",
+            "src": "/images/items/P0040.png",
+            "price": "NT$1600"
+        },
+        {
+            "id": 41,
+            "name": "CHANEL N°5 L'EAU清新晨露隨身乳霜",
+            "src": "/images/items/P0041.png",
+            "price": "NT$2100"
+        },
+        {
+            "id": 42,
+            "name": "CHANEL PLATINUM EGOISTE男性淡香水",
+            "src": "/images/items/P0042.png",
+            "price": "NT$1740 "
+        },
+        {
+            "id": 43,
+            "name": "CHANEL ALLURE 男性淡香水",
+            "src": "/images/items/P0043.png",
+            "price": "NT$2100"
+        },
+        {
+            "id": 44,
+            "name": "CHANEL BLEU 藍色男性香水",
+            "src": "/images/items/P0044.png",
+            "price": "NT$2380"
+        },
+        {
+            "id": 45,
+            "name": "CHANEL BLEU 藍色男性隨身淡香水",
+            "src": "/images/items/P0045.png",
+            "price": "NT$3250"
+        }
+    ]
+}

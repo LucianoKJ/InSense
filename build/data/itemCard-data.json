@@ -1,0 +1,189 @@
+[
+    {
+        "id": 1,
+        "title": "BYREDO",
+        "brandName": "byredo",
+        "items": [
+            {
+                "id": 1,
+                "name": "BYREDO 詩性既視淡香精",
+                "src": "/images/items/P0001.png",
+                "price": "NT$3900"
+            },
+            {
+                "id": 2,
+                "name": "BYREDO 光合假期淡香精",
+                "src": "/images/items/P0002.png",
+                "price": "NT$3900"
+            },
+            {
+                "id": 3,
+                "name": "BYREDO 無人之境淡香精",
+                "src": "/images/items/P0003.png",
+                "price": "NT$3900"
+            },
+            {
+                "id": 4,
+                "name": "BYREDO 北國之春淡香精",
+                "src": "/images/items/P0004.png",
+                "price": "NT$3900"
+            },
+            {
+                "id": 5,
+                "name": "BYREDO 週日之香淡香精",
+                "src": "/images/items/P0005.png",
+                "price": "NT$6200"
+            },
+            {
+                "id": 6,
+                "name": "BYREDO 吉普賽之水淡香精",
+                "src": "/images/items/P0006.png",
+                "price": "NT$6200"
+            },
+            {
+                "id": 7,
+                "name": "BYREDO 夜幕玫瑰淡香精",
+                "src": "/images/items/P0007.png",
+                "price": "NT$6200"
+            },
+            {
+                "id": 8,
+                "name": "BYREDO 鬱金香淡香精",
+                "src": "/images/items/P0008.png",
+                "price": "NT$6200"
+            },
+            {
+                "id": 9,
+                "name": "BYREDO 光合假期髮香噴霧",
+                "src": "/images/items/P0009.png",
+                "price": "NT$1800"
+            },
+            {
+                "id": 10,
+                "name": "BYREDO 吉普賽之水髮香噴霧",
+                "src": "/images/items/P0010.png",
+                "price": "NT$1800 "
+            },
+            {
+                "id": 11,
+                "name": "BYREDO 鬱金香髮香噴霧",
+                "src": "/images/items/P0011.png",
+                "price": "NT$1800 "
+            },
+            {
+                "id": 12,
+                "name": "BYREDO 旅行組皮套",
+                "src": "/images/items/P0012.png",
+                "price": "NT$2800 "
+            },
+            {
+                "id": 13,
+                "name": "BYREDO 淡香精旅行組-城市游牧（熱帶爵士／返樸歸真／吉普賽之水）",
+                "src": "/images/items/P0013.png",
+                "price": "NT$3000 "
+            },
+            {
+                "id": 14,
+                "name": "BYREDO 麂皮乾洗手",
+                "src": "/images/items/P0014.png",
+                "price": "NT$1000"
+            },
+            {
+                "id": 15,
+                "name": "BYREDO 鬱金香乾洗手",
+                "src": "/images/items/P0015.png",
+                "price": "NT$1000"
+            },
+            {
+                "id": 16,
+                "name": "BYREDO 玫瑰護手霜",
+                "src": "/images/items/P0016.png",
+                "price": "NT$1900"
+            },
+            {
+                "id": 17,
+                "name": "BYREDO 鬱金香護手霜",
+                "src": "/images/items/P0017.png",
+                "price": "NT$1900"
+            },
+            {
+                "id": 18,
+                "name": "BYREDO 熱帶爵士護手霜",
+                "src": "/images/items/P0018.png",
+                "price": "NT$1900"
+            },
+            {
+                "id": 19,
+                "name": "BYREDO 岩蘭草乾洗手",
+                "src": "/images/items/P0019.png",
+                "price": "NT$1000"
+            },
+            {
+                "id": 20,
+                "name": "BYREDO 麂皮手部清潔露",
+                "src": "/images/items/P0020.png",
+                "price": "NT$1650 "
+            },
+            {
+                "id": 21,
+                "name": "BYREDO 鬱金香手部清潔露",
+                "src": "/images/items/P0021.png",
+                "price": "NT$1650"
+            },
+            {
+                "id": 22,
+                "name": "BYREDO 玫瑰手部清潔露",
+                "src": "/images/items/P0022.png",
+                "price": "NT$1650"
+            },
+            {
+                "id": 23,
+                "name": "BYREDO 鬱金香沐浴膠",
+                "src": "/images/items/P0023.png",
+                "price": "NT$1600"
+            },
+            {
+                "id": 24,
+                "name": "BYREDO 無人之境沐浴膠",
+                "src": "/images/items/P0024.png",
+                "price": "NT$1600"
+            },
+            {
+                "id": 25,
+                "name": "BYREDO 莫哈維之影沐浴膠",
+                "src": "/images/items/P0025.png",
+                "price": "NT$1600"
+            },
+            {
+                "id": 26,
+                "name": "BYREDO 無人之境身體乳",
+                "src": "/images/items/P0026.png",
+                "price": "NT$2200"
+            },
+            {
+                "id": 27,
+                "name": "BYREDO 逝去之愛香氛蠟燭",
+                "src": "/images/items/P0027.png",
+                "price": "NT$2200"
+            },
+            {
+                "id": 28,
+                "name": "BYREDO 幽香追憶香氛蠟燭",
+                "src": "/images/items/P0028.png",
+                "price": "NT$2200"
+            },
+            {
+                "id": 29,
+                "name": "BYREDO 旋轉木馬香氛蠟燭",
+                "src": "/images/items/P0029.png",
+                "price": "NT$2200"
+            },
+            {
+                "id": 30,
+                "name": "BYREDO 懷舊書香香氛蠟燭",
+                "src": "/images/items/P0030.png",
+                "price": "NT$2200"
+            }
+        ]
+    }
+]
