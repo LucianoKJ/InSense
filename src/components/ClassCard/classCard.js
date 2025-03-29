@@ -6,6 +6,8 @@ import { bindActionCreators } from "redux";
 import { userToggleFunc } from '../../Redux/nav/navAction'
 import "./classCard.scss";
 
+import { apiUri } from "../../constants/api";
+
 const ClassCard = ({ logInStatus, classImg, classTime, className, classId, remainingPeople, userToggleFunc, bookInfo }) => {
   const selectClassId = bookInfo && bookInfo.filter(i => i.classId === classId && i.bookStatus === '預約成功')
   const newClassArray = []
@@ -17,7 +19,7 @@ const ClassCard = ({ logInStatus, classImg, classTime, className, classId, remai
       <div className={`class-card-wrapper`}>
         {remainingPeople === 0 ? <div className='card-block'><p>人數已滿</p></div> : ''}
         <div className={`card-img`}>
-          <img src={`http://localhost:3030/images/class/${classImg}.png`} />
+          <img src={`${apiUri}/images/class/${classImg}.png`} />
         </div>
         <div className="card-content d-flex justify-content-between align-items-center">
           <p>{classTime}</p>

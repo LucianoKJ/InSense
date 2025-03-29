@@ -12,6 +12,7 @@ import { clearCart, clearCouponCode } from "../../Redux/cart/cartAction";
 import Address from "../../components/Address/address";
 import InquiryAlert from "../../components/InquiryAlert/inquiryAlert";
 import axios from "axios";
+import { apiUri } from "../../constants/api";
 
 //radio checkbox icon
 import { FiSquare, FiCheckSquare } from "react-icons/fi";
@@ -158,7 +159,7 @@ const OrderPayMent = ({
   };
 
   const getSavedCreditCardInfo = async () => {
-    const res = await fetch(`http://localhost:3030/orders/getCreditCardInfo`, {
+    const res = await fetch(`${apiUri}/orders/getCreditCardInfo`, {
       credentials: "include",
     });
     const data = await res.json();
@@ -166,7 +167,7 @@ const OrderPayMent = ({
   };
 
   const addordersToSever = async () => {
-    const res = await axios.post(`http://localhost:3030/orders/orderList`, {
+    const res = await axios.post(`${apiUri}/orders/orderList`, {
       paymentdata: paymentdata,
       selectCartItems: selectCartItems,
       selectCartTotal: selectCartTotal,

@@ -8,6 +8,8 @@ import { FiBookmark } from "react-icons/fi";
 import { userLogin, userLogOut } from "../../Redux/user/userAction";
 import { userToggleFunc } from "../../Redux/nav/navAction";
 
+import { apiUri } from '../../constants/api';
+
 function SavedItems(props) {
 
   const { user, userLogin, userLogOut, userToggleFunc, name } = props;
@@ -20,7 +22,7 @@ function SavedItems(props) {
     const data = {
       itemId: props.itemId,
     };
-    const res = await fetch(`http://localhost:3030/itemdetail/togglebookmark`, {
+    const res = await fetch(`${apiUri}/itemdetail/togglebookmark`, {
       method: "PATCH",
       credentials: "include",
       body: JSON.stringify(data),

@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 //Redux
 import { userLogOut } from "../../Redux/user/userAction";
 
+import { apiUri } from "../../constants/api";
+
 const AccountRightBar = (props) => {
   //引入Redux
   const { user, userLogOut } = props;
@@ -20,7 +22,7 @@ const AccountRightBar = (props) => {
       //到後端判斷
       try {
         const request = new Request(
-          "http://localhost:3030/users/logout",
+          `${apiUri}/users/logout`,
           {
             method: "POST",
             credentials: "include",

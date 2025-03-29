@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+
 import "./accountModify.scss";
 
 //sha256
@@ -34,6 +35,8 @@ import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
 } from "@material-ui/pickers";
+
+import { apiUri } from "../../constants/api";
 
 const AccountModify = (props) => {
   //destructor
@@ -160,7 +163,7 @@ const AccountModify = (props) => {
 
       //   console.log(data);
       //向後端請求更新
-      const response = await fetch("http://localhost:3030/users/infomodify", {
+      const response = await fetch(`${apiUri}/users/infomodify`, {
         method: "PATCH",
         credentials: "include",
         body: JSON.stringify(data),
@@ -238,7 +241,7 @@ const AccountModify = (props) => {
 
       //向後端請求更新
       const response = await fetch(
-        "http://localhost:3030/users/changepassword",
+        `${apiUri}/users/changepassword`,
         {
           method: "PATCH",
           credentials: "include",
@@ -329,8 +332,8 @@ const AccountModify = (props) => {
                   {gender === "woman" ? (
                     <FiCheckCircle className="modify-select-circle" />
                   ) : (
-                      <FiCircle className="modify-select-circle" />
-                    )}
+                    <FiCircle className="modify-select-circle" />
+                  )}
                   <p>女性</p>
                 </label>
                 <input
@@ -348,8 +351,8 @@ const AccountModify = (props) => {
                   {gender === "man" ? (
                     <FiCheckCircle className="modify-select-circle" />
                   ) : (
-                      <FiCircle className="modify-select-circle" />
-                    )}
+                    <FiCircle className="modify-select-circle" />
+                  )}
                   <p>男性</p>
                 </label>
               </div>

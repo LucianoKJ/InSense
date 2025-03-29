@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./classes.scss";
 import ClassItem from "../classItem";
 
+import { apiUri } from '../../constants/api';
 
 const Classes = () => {
   const [myClassList, setMyClassList] = useState([])
@@ -32,14 +33,14 @@ const Classes = () => {
     }
   }
   const fetchMyClassData = async () => {
-    const res = await fetch("http://localhost:3030/users/classlist", {
+    const res = await fetch(`${apiUri}/users/classlist`, {
       credentials: "include",
     });
     const data = await res.json();
     return data;
   };
   const fetchAllClassDate = async () => {
-    const res = await fetch("http://localhost:3030/users/allclasslist", {
+    const res = await fetch(`${apiUri}/users/allclasslist`, {
       credentials: "include",
     });
     const data = await res.json();
@@ -49,7 +50,7 @@ const Classes = () => {
     const info = {
       bookId: e.currentTarget.id
     }
-    const res = await fetch(`http://localhost:3030/users/classlist`, {
+    await fetch(`${apiUri}/users/classlist`, {
       method: "PATCH",
       credentials: "include",
       headers: {

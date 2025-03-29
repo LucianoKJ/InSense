@@ -15,7 +15,8 @@ import ItemOrderBy from "../../components/ItemOrderBy/itemOrderBy";
 import MainContainer from "../../components/mainContainer";
 import ItemCard from "../../components/ItemCard/itemCard";
 import "./itemList.scss";
-import WishList from "../../components/WishList/wishList";
+import { apiUri } from "../../constants/api";
+
 const ItemList = (props) => {
     //Redux
     const { user, userLogin, userLogOut } = props;
@@ -42,7 +43,7 @@ const ItemList = (props) => {
         // const brand = "chanel";
         // console.log(brand);
         const res = await fetch(
-            `http://localhost:3030/itemlist/${brandOrCategory}/${name}`
+            `${apiUri}/itemlist/${brandOrCategory}/${name}`
         );
         const data = await res.json();
         // console.log("data", data);
@@ -52,7 +53,7 @@ const ItemList = (props) => {
     //取得願望清單
     const fetchWishList = async (brandOrCategory, name) => {
         const res = await fetch(
-            `http://localhost:3030/itemlist/wishlist/${brandOrCategory}/${name}`,
+            `${apiUri}/itemlist/wishlist/${brandOrCategory}/${name}`,
             { credentials: "include" }
         );
         const dataWish = await res.json();
@@ -155,7 +156,7 @@ const ItemList = (props) => {
                 ""
             )}
             <ItemHead
-                Banner={`http://localhost:3030/images/banner/${
+                Banner={`${apiUri}/images/banner/${
                     itemHeadData.length
                         ? itemHeadData[0].brandBanner
                             ? itemHeadData[0].brandBanner
@@ -233,7 +234,7 @@ const ItemList = (props) => {
                                   <ItemCard
                                       key={el.itemId}
                                       itemId={el.itemId}
-                                      itemimg={`http://localhost:3030/images/items/${el.itemImg}.png`}
+                                      itemimg={`${apiUri}/images/items/${el.itemImg}.png`}
                                       itemName={el.itemName}
                                       itemPrice={el.itemPrice}
                                       listName={

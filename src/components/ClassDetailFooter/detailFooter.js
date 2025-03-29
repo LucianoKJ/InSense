@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { withRouter } from 'react-router-dom'
 import './detailFooter.scss'
 import Swal from 'sweetalert2'
 import { bindActionCreators } from "redux";
 import { connect } from 'react-redux'
 import { userToggleFunc } from '../../Redux/nav/navAction'
-
+import { apiUri } from '../../constants/api';
 
 const DetailFooter = ({ classTime, match, history, classPrice, userToggleFunc }) => {
   const [reservationPeople, setReservationPeople] = useState('')
@@ -20,7 +20,7 @@ const DetailFooter = ({ classTime, match, history, classPrice, userToggleFunc })
       classId: match.params.classid,
       bookTotalPrice: classPrice * reservationPeople
     }
-    const response = await fetch(`http://localhost:3030/class/classdetail/${match.params.classid}`, {
+    const response = await fetch(`${apiUri}/class/classdetail/${match.params.classid}`, {
       method: 'POST',
       credentials: 'include',
       headers: {

@@ -5,6 +5,7 @@ import FaqAccordionSubtitle from "../../components/FaqAccordionSubtitle/FaqAccor
 import FaqAccordionHead from "../../components/FaqAccordionHead/FaqAccordionHead"
 import MainContainer from '../../components/mainContainer'
 
+import { apiUri } from "../../constants/api";
 
 const FaqAccordion = (props) => {
   const [titleDropDownToggle, setTitleDropDownToggle] = useState({});
@@ -13,31 +14,31 @@ const FaqAccordion = (props) => {
   const [subtitle, setSubtitle] = useState([]);
   const [id, setId] = useState("");
   const [allClose, setAllClose] = useState([]);
-  
-  
+
+
 
 
 
   const titleAccordion = (e) => {
-    
+
 
     //重設state
-    const newObj ={...titleDropDownToggle}
+    const newObj = { ...titleDropDownToggle }
     newObj[e.target.id] = !titleDropDownToggle[e.target.id]
 
     setTitleDropDownToggle(newObj)
     setAllClose(Object.values(titleDropDownToggle))
     // console.log(Object.values(titleDropDownToggle))
-    
+
   };
 
-  const subtitleAccordion = (e) =>{
-  
-    
+  const subtitleAccordion = (e) => {
+
+
   }
 
   async function getData() {
-    const request = new Request("http://localhost:3030/faq", {
+    const request = new Request(`${apiUri}/faq`, {
       method: "GET",
       headers: new Headers({
         Accept: "application/json",
@@ -61,81 +62,81 @@ const FaqAccordion = (props) => {
         const titleId = el.titleId;
         newObj[titleId] = false;
       });
-      setTitleDropDownToggle(newObj); 
+      setTitleDropDownToggle(newObj);
       setSubtitle(data[1]);
     })();
   }, []);
 
-  
-  useEffect(() =>{
-    if(props.titleId === " "){
+
+  useEffect(() => {
+    if (props.titleId === " ") {
       setTitleDropDownToggle("")
     }
 
-  },[props.titleId])
-  
+  }, [props.titleId])
+
   return (
     <>
-<MainContainer>
-    <FaqAccordionHead />
-      <div className="faq-wrapper">
-        {title.map((el, item) => [
-          <FaqAccordionTitle
-            onClick={(e) => titleAccordion(e)}
-            key={item}
-            value={el.id}
-            id={el.id}
-            titleId={el.titleId}
-            title={el.title}
-          />,
-          subtitle
-            .filter((subData, item) => subData.titleId === el.titleId)
-            .map(
-              (props, index) => (
+      <MainContainer>
+        <FaqAccordionHead />
+        <div className="faq-wrapper">
+          {title.map((el, item) => [
+            <FaqAccordionTitle
+              onClick={(e) => titleAccordion(e)}
+              key={item}
+              value={el.id}
+              id={el.id}
+              titleId={el.titleId}
+              title={el.title}
+            />,
+            subtitle
+              .filter((subData, item) => subData.titleId === el.titleId)
+              .map(
+                (props, index) => (
 
-                (
-                  <FaqAccordionSubtitle
-                    onClickSub={(e)=>subtitleAccordion(e)}
-                    key={index}
-                    allClose={allClose}
-                    subtitle={props.subtitle}
-                    data-title={props.faqTitle}
-                    subtitleContent={props.subtitleContent}
-                    active={titleDropDownToggle[props.titleId]}
-                    value={props.id}
-                    id={props.id}
-                    titleId={props.titleId}
-                  />
+                  (
+                    <FaqAccordionSubtitle
+                      onClickSub={(e) => subtitleAccordion(e)}
+                      key={index}
+                      allClose={allClose}
+                      subtitle={props.subtitle}
+                      data-title={props.faqTitle}
+                      subtitleContent={props.subtitleContent}
+                      active={titleDropDownToggle[props.titleId]}
+                      value={props.id}
+                      id={props.id}
+                      titleId={props.titleId}
+                    />
+                  )
                 )
-              )
-            ),
-        ])}
-      </div>
-      <div className="white-space"></div>
-
-      <div className="bottom d-flex">
-        <div className="email">
-          <p className="text">與我們聯繫</p>
-          <a className="button" href="mailto:insenseofficial2020@gmail.com">
-          <p >
-          通過電子郵件
-          </p>
-          </a>
+              ),
+          ])}
         </div>
+        <div className="white-space"></div>
 
-        <div className="tel ">
-          <p className="text">透過電話
-          </p>
+        <div className="bottom d-flex">
+          <div className="email">
+            <p className="text">與我們聯繫</p>
+            <a className="button" href="mailto:insenseofficial2020@gmail.com">
+              <p >
+                通過電子郵件
+              </p>
+            </a>
+          </div>
 
-          <p className="tel-number">
-          0800-067-157
-          </p>
+          <div className="tel ">
+            <p className="text">透過電話
+            </p>
 
+            <p className="tel-number">
+              0800-067-157
+            </p>
+
+          </div>
         </div>
-      </div>
-</MainContainer>
-      </>
-    
+      </MainContainer>
+    </>
+
   );
 };
 

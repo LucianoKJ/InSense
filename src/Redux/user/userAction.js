@@ -1,3 +1,6 @@
+import { apiUri } from "../../constants/api";
+
+
 //登入
 export const userLogin = (userInfo) => {
   return { type: "LOG_IN", userInfo };
@@ -19,7 +22,7 @@ export const userLogInAsync = (
     };
 
     //到後端判斷
-    const request = new Request("http://localhost:3030/users/login", {
+    const request = new Request(`${apiUri}/users/login`, {
       method: "POST",
       credentials: "include",
       body: JSON.stringify(data),
@@ -51,7 +54,7 @@ export const userLogInAsync = (
 //檢查登入
 export const checkLogin = (cbLogIn = () => { }) => {
   return async function checkLoginFromServer(dispatch) {
-    const request = new Request("http://localhost:3030/users/checklogin", {
+    const request = new Request(`${apiUri}/users/checklogin`, {
       method: "POST",
       credentials: "include",
       headers: new Headers({

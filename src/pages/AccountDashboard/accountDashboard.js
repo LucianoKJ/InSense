@@ -17,6 +17,8 @@ import ProgressBoard from "../../components/ProgressBoard/progressBoard";
 import LevelBoard from "../../components/LevelBoard/levelBoard";
 import SuccessAlert from "../../components/SuccessAlert/successAlert";
 
+import { apiUri } from "../../constants/api";
+
 const AccountDashboard = (props) => {
   const { user, history, userLogin, userLogOut } = props;
   const [level, setLevel] = useState(0);
@@ -51,7 +53,7 @@ const AccountDashboard = (props) => {
   useEffect(() => {
     if (user.logInStatus) {
       (async () => {
-        const response = await fetch("http://localhost:3030/users/dashboard", {
+        const response = await fetch(`${apiUri}/users/dashboard`, {
           credentials: "include",
           headers: {
             "content-type": "application/json",

@@ -15,6 +15,7 @@ import SuccessAlert from "../../components/SuccessAlert/successAlert";
 
 //react icon
 import { AiFillUnlock } from "react-icons/ai";
+import { apiUri } from "../../constants/api";
 
 const PasswordForgotChange = (props) => {
   const { match, history } = props;
@@ -118,7 +119,7 @@ const PasswordForgotChange = (props) => {
         verification: verification,
       };
       const responsePasswordForgotChange = await fetch(
-        "http://localhost:3030/passwordissue/passwordforgotchange",
+        `${apiUri}/passwordissue/passwordforgotchange`,
         {
           method: "PATCH",
           body: JSON.stringify(data),

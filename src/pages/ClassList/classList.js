@@ -8,12 +8,16 @@ import { bindActionCreators } from "redux";
 //Redux
 import { userLogin, userLogOut } from "../../Redux/user/userAction";
 import "./classList.scss";
+
+import { apiUri } from "../../constants/api";
+
+
 const ClassList = ({ user, userLogin, userLogOut }) => {
   const [classInfo, setClassInfo] = useState([]);
   const [bookInfo, setBookInfo] = useState([]);
 
   const fetchClassData = async () => {
-    const res = await fetch('http://localhost:3030/class', { credentials: 'include' })
+    const res = await fetch(`${apiUri}/class`, { credentials: 'include' })
     const data = await res.json()
     return data
   }

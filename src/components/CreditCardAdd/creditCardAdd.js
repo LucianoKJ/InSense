@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 
@@ -28,6 +28,8 @@ import Address from "../../components/Address/address";
 import CreditCardNumber from "../../components/CreditCardNumber/creditCardNumber";
 import CreditCardAssociation from "../../components/CreditCardAssociation/creditCardAssociation";
 import CreditCardExpiration from "../../components/CreditCardExpiration/creditCardExpiration";
+
+import { apiUri } from '../../constants/api';
 
 const FormDialog = function (props) {
   // const [open, setOpen] = React.useState(false);
@@ -113,7 +115,7 @@ const FormDialog = function (props) {
 
         //向後端請求新增
         const response = await fetch(
-          "http://localhost:3030/users/creditcardadd",
+          `${apiUri}/users/creditcardadd`,
           {
             method: "POST",
             credentials: "include",

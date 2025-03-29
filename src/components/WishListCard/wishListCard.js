@@ -10,6 +10,7 @@ import { FiX } from "react-icons/fi";
 import SubmitButton from "../SubmitButton/submitButton";
 import { connect } from "react-redux";
 import { addItem } from "../../Redux/cart/cartAction";
+import { apiUri } from "../../constants/api";
 
 const WishListCard = (props) => {
     const { itemId, itemimg, itemName, itemSize, itemPrice, addItem } = props;
@@ -19,7 +20,7 @@ const WishListCard = (props) => {
     const cancelWish = () => {
         (async () => {
             const res = await fetch(
-                `http://localhost:3030/users/deletewish/${itemId}`,
+                `${apiUri}/users/deletewish/${itemId}`,
                 {
                     method: "DELETE",
                     credentials: "include",
@@ -44,7 +45,7 @@ const WishListCard = (props) => {
             >
                 <div className="list-card-img">
                     <img
-                        // src={`http://localhost:3030/images/items/${itemimg}.png`}
+                        // src={`${apiUri}/images/items/${itemimg}.png`}
                         src={itemimg}
                         alt="商品圖片"
                     />

@@ -119,7 +119,7 @@ const IndexLogin = (props) => {
       </div>
       <div className="loginFooter text-center">
         <Button onClick={handleLogin}>登入</Button>
-        <Button onClick={redirectRegister}>註冊</Button>
+        {/* <Button onClick={redirectRegister}>註冊</Button> */}
         <Button onClick={redirectPasswordForgot}>忘記密碼</Button>
       </div>
       <SuccessAlert

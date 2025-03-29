@@ -21,6 +21,7 @@ import {
 //component
 import Address from "../../components/Address/address";
 import InquiryAlert from "../../components/InquiryAlert/inquiryAlert";
+import { apiUri } from '../../constants/api';
 
 //destructor
 const CreditCardBlock = (props) => {
@@ -80,7 +81,7 @@ const CreditCardBlock = (props) => {
         billAddressStreet: address,
       };
       // console.log("data", data);
-      const res = await fetch(`http://localhost:3030/users/creditcardmodify`, {
+      const res = await fetch(`${apiUri}/users/creditcardmodify`, {
         method: "PATCH",
         credentials: "include",
         body: JSON.stringify(data),
@@ -156,7 +157,7 @@ const CreditCardBlock = (props) => {
   //changeDefault
   const changeDefault = async () => {
     const res = await fetch(
-      `http://localhost:3030/users/creditcardchangedefault/${id}`,
+      `${apiUri}/users/creditcardchangedefault/${id}`,
       {
         method: "PATCH",
         credentials: "include",
@@ -197,7 +198,7 @@ const CreditCardBlock = (props) => {
   //delete payment
   const deletePayment = async () => {
     const res = await fetch(
-      `http://localhost:3030/users/creditcarddelete/${id}`,
+      `${apiUri}/users/creditcarddelete/${id}`,
       {
         method: "DELETE",
         credentials: "include",

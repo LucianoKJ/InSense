@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { cancelOrderFunc } from '../../Redux/order/orderAction'
 
+import { apiUri } from '../../constants/api';
 
 const OrderHistoryCard = (props) => {
   const { cancelOrderFunc, orderId, totalPrice, orderDate, orderStatus, deliveryId, itemImg, itemName, itemPrice, itemBrand } = props
@@ -30,7 +31,7 @@ const OrderHistoryCard = (props) => {
     const data = {
       orderId: orderId
     }
-    const response = await fetch(`http://localhost:3030/users/orderhistory/${orderId}`, {
+    const response = await fetch(`${apiUri}/users/orderhistory/${orderId}`, {
       method: 'PATCH',
       credentials: 'include',
       headers: {

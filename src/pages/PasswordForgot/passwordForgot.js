@@ -15,6 +15,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 //react
 import { FcSurvey } from "react-icons/fc";
+import { apiUri } from "../../constants/api";
 
 const PasswordForgot = (props) => {
   const { history } = props;
@@ -87,7 +88,7 @@ const PasswordForgot = (props) => {
       //先開啟progress
       setProcessing(true);
       const responsePasswordForgot = await fetch(
-        "http://localhost:3030/passwordissue/passwordforgot",
+        `${apiUri}/passwordissue/passwordforgot`,
         {
           method: "POST",
           body: JSON.stringify(data),

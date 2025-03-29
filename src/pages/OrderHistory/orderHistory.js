@@ -3,6 +3,7 @@ import MainContainer from '../../components/mainContainer'
 import AccountSideBar from '../../components/AccountSideBar/accountSideBar'
 import OrderHistoryCard from '../../components/OrderHistoryCard/orderHistoryCard'
 import { connect } from "react-redux";
+import { apiUri } from "../../constants/api";
 
 
 import './orderHistory.scss'
@@ -16,7 +17,7 @@ const OrderHistory = (props) => {
   const [ordersHistory, setOrdersHistory] = useState([])
 
   const fetchOrderHistory = async () => {
-    const response = await fetch('http://localhost:3030/users/orderhistory', { credentials: 'include' })
+    const response = await fetch(`${apiUri}/users/orderhistory`, { credentials: 'include' })
     const data = await response.json()
     return data
   }

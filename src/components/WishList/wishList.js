@@ -11,6 +11,8 @@ import { userLogin, userLogOut } from "../../Redux/user/userAction";
 import WishListCard from "../WishListCard/wishListCard";
 import SuccessAlert from "../SuccessAlert/successAlert";
 
+import { apiUri } from '../../constants/api';
+
 const WishList = (props) => {
   const { user, history } = props;
   const [myWishList, setMyWishList] = useState([]);
@@ -42,7 +44,7 @@ const WishList = (props) => {
 
   //取得願望清單
   const fetchAllWishList = async (brandOrCategory, name) => {
-    const res = await fetch(`http://localhost:3030/users/wishlist`, {
+    const res = await fetch(`${apiUri}/users/wishlist`, {
       credentials: "include",
     });
     const dataWish = await res.json();
@@ -86,7 +88,7 @@ const WishList = (props) => {
                 <WishListCard
                   key={el.itemId}
                   itemId={el.itemId}
-                  itemimg={`http://localhost:3030/images/items/${el.itemImg}.png`}
+                  itemimg={`${apiUri}/images/items/${el.itemImg}.png`}
                   itemName={el.itemName}
                   itemPrice={el.itemPrice}
                 />

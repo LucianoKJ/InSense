@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./indexSubscribe.scss";
 import SuccessAlert from '../../components/SuccessAlert/successAlert'
+
+import { apiUri } from '../../constants/api';
+
 const IndexSubscribe = () => {
   const [email, setEmail] = useState("")
   //alert
@@ -32,7 +35,7 @@ const IndexSubscribe = () => {
     const data = {
       userEmail: email
     }
-    const response = await fetch('http://localhost:3030/coupon/sendcoupon', {
+    const response = await fetch(`${apiUri}/coupon/sendcoupon`, {
       method: "POST",
       credentials: "include",
       body: JSON.stringify(data),

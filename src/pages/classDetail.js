@@ -5,12 +5,14 @@ import DetailContent from "../components/ClassDetailContent/detailContent";
 import DetailFooter from "../components/ClassDetailFooter/detailFooter";
 import { withRouter } from "react-router-dom";
 
+import { apiUri } from "../constants/api";
+
 const ClassDetail = ({ match }) => {
   const [detail, setDetail] = useState([]);
 
   const fetchClassDetailData = async () => {
     const res = await fetch(
-      `http://localhost:3030/class/classdetail/${match.params.classid}`
+      `${apiUri}/class/classdetail/${match.params.classid}`
     );
     const data = res.json();
     return data;

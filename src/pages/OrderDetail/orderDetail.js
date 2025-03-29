@@ -3,12 +3,13 @@ import './orderDetail.scss'
 import MainContainer from '../../components/mainContainer'
 import OrderProductCard from '../../components/OrderProductCard/orderProductCard'
 import { withRouter } from 'react-router-dom'
+import { apiUri } from "../../constants/api";
 
 const OrderDeatil = ({ match, history }) => {
   const [orderDetail, setOrderDetail] = useState({})
 
   const fetchOrderDetailData = async () => {
-    const response = await fetch(`http://localhost:3030/orders/orderdetail/${match.params.orderid}`, {
+    const response = await fetch(`${apiUri}/orders/orderdetail/${match.params.orderid}`, {
       credentials: 'include'
     })
     const data = await response.json()

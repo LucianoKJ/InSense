@@ -35,6 +35,8 @@ import {
   KeyboardDatePicker,
 } from "@material-ui/pickers";
 
+import { apiUri } from "../../constants/api";
+
 const Registration = (props) => {
   //Redux
   const { user, userLogin } = props;
@@ -186,7 +188,7 @@ const Registration = (props) => {
         userBirthday: selectedDate.toLocaleDateString().split("/").join("-"),
       };
 
-      const response = await fetch("http://localhost:3030/users/registration", {
+      const response = await fetch(`${apiUri}/users/registration`, {
         method: "POST",
         credentials: "include",
         body: JSON.stringify(data),

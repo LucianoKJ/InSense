@@ -1,12 +1,13 @@
 import React from 'react'
 import './classHead.scss'
+import { apiUri } from '../../constants/api';
 
 const ClassHead = ({ classImgDir, classImg, title, content, content2 }) => {
   return (
     <>
       <div className="class-detail-head class-head">
         <div className="headLeft">
-          <img className="object-fit-cover" src={`http://localhost:3030/images/${classImgDir}/${classImg}.png`} />
+          <img className="object-fit-cover" src={`${apiUri}/images/${classImgDir}/${classImg}.png`} />
         </div>
         <div className="headRight ">
           <p className="headTitle">{title}</p>

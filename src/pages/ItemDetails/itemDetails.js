@@ -12,6 +12,8 @@ import ItemImg from "../../components/ItemImg/itemImg";
 import ItemInfo from "../../components/ItemInfo/itemInfo";
 import ItemSuggest from "../../components/ItemSuggest/itemSuggest";
 import "./itemDetails.scss";
+import { apiUri } from "../../constants/api";
+
 
 const ItemDetails = (props) => {
     //Redux
@@ -26,7 +28,7 @@ const ItemDetails = (props) => {
 
     //僅做擷取資料用途
     const fetchItemData = async (itemId) => {
-        const res = await fetch(`http://localhost:3030/itemdetail/${itemId}`);
+        const res = await fetch(`${apiUri}/itemdetail/${itemId}`);
         const data = await res.json();
         console.log("data", data);
         return data;
@@ -35,7 +37,7 @@ const ItemDetails = (props) => {
     //取得願望清單
     const fetchWishList = async (itemId) => {
         const res = await fetch(
-            `http://localhost:3030/itemdetail/wishlist/${itemId}`,
+            `${apiUri}/itemdetail/wishlist/${itemId}`,
             { credentials: "include" }
         );
         const dataWish = await res.json();
@@ -95,11 +97,11 @@ const ItemDetails = (props) => {
                 <div className="item-details-container d-flex">
                     {itemImgData.length ? (
                         <ItemImg
-                            itemimg={`http://localhost:3030/images/items/${itemImgData[0]}.png`}
-                            itemimg1={`http://localhost:3030/images/items/${itemImgData[0]}.png`}
+                            itemimg={`${apiUri}/images/items/${itemImgData[0]}.png`}
+                            itemimg1={`${apiUri}/images/items/${itemImgData[0]}.png`}
                             itemimg2={
                                 itemImgData[1]
-                                    ? `http://localhost:3030/images/items/${itemImgData[1]}.png`
+                                    ? `${apiUri}/images/items/${itemImgData[1]}.png`
                                     : false
                             }
                         />
@@ -114,7 +116,7 @@ const ItemDetails = (props) => {
                         fragranceDiscription={itemInfosData.fragranceDetails}
                         itemId={itemId}
                         wish={itemWish}
-                        itemimg={`http://localhost:3030/images/items/${itemImgData[0]}.png`}
+                        itemimg={`${apiUri}/images/items/${itemImgData[0]}.png`}
                     />
                 </div>
                 <div className="item-suggest-container">

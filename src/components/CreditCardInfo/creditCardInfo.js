@@ -25,6 +25,8 @@ import CreditCardBlock from "../CreditCardBlock/creditCardBlock";
 import CreditCardAdd from "../CreditCardAdd/creditCardAdd";
 import SuccessAlert from "../SuccessAlert/successAlert";
 
+import { apiUri } from '../../constants/api';
+
 const CreditCardInfo = (props) => {
   const { user, history } = props;
   const [creditCardList, setCreditCardList] = useState([]);
@@ -83,7 +85,7 @@ const CreditCardInfo = (props) => {
 
   //fetch credit card info
   const fetchCreditCardInfo = async () => {
-    const res = await fetch(`http://localhost:3030/users/creditcardinfo`, {
+    const res = await fetch(`${apiUri}/users/creditcardinfo`, {
       credentials: "include",
     });
     const creditCardInfo = await res.json();

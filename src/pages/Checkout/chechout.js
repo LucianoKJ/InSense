@@ -19,6 +19,8 @@ import "./checkout.scss";
 import Button from "@material-ui/core/Button";
 import SubmitButton from "../../components/SubmitButton/submitButton"
 
+import { apiUri } from "../../constants/api";
+
 const CheckoutPage = ({
   cartItems,
   total,
@@ -36,7 +38,7 @@ const CheckoutPage = ({
   const [Disabled, setDisabled] = useState(false)
 
   async function getData() {
-    const request = new Request("http://localhost:3030/coupon", {
+    const request = new Request(`${apiUri}/coupon`, {
       method: "GET",
       headers: new Headers({
         Accept: "application/json",

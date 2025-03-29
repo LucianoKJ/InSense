@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./MyCoupon.scss";
 import FormInput from "../FormInput/FormInput";
+import { apiUri } from '../../constants/api';
+
 const MyCoupon = (props) => {
   const [couponCode, setCouponCode] = useState();
   const [couponDiscount, setCouponDiscount] = useState();
@@ -9,7 +11,7 @@ const MyCoupon = (props) => {
   const [DisCountValue, setDiscountValue] = useState(0);
 
   async function getData() {
-    const request = new Request("http://localhost:3030/coupon", {
+    const request = new Request(`${apiUri}/coupon`, {
       method: "GET",
       headers: new Headers({
         Accept: "application/json",
