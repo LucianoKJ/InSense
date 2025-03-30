@@ -41,7 +41,7 @@ const ClassList = ({ user, userLogin, userLogOut }) => {
         content={`InSense提供客製化香水體驗課程,`}
         content2={"與您一起感受香氛"}
       />
-      {classInfo.map((info) => (
+      {classInfo?.map((info) => (
         <ClassCard
           key={info.classId}
           classImg={info.classImg}

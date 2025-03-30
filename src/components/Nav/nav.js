@@ -51,7 +51,7 @@ const Nav = ({
       name: "home-scents",
       pathUrl: "/itemlist/category/home-scents",
     },
-    // { itemName: "體驗課程", name: "class", pathUrl: "/classlist" },
+    { itemName: "體驗課程", name: "class", pathUrl: "/classlist" },
     { itemName: 'FAQ', name: 'faq', pathUrl: '/FaqAccordion' }
   ];
   const brandItem = [
