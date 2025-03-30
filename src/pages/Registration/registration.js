@@ -185,7 +185,7 @@ const Registration = (props) => {
         userDistrict: districts,
         userAddress: address,
         userPostCode: postCode,
-        userBirthday: selectedDate.toLocaleDateString().split("/").join("-"),
+        userBirthday: selectedDate.toLocaleDateString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit' })
       };
 
       const response = await fetch(`${apiUri}/users/registration`, {
@@ -249,8 +249,8 @@ const Registration = (props) => {
                       {gender === "woman" ? (
                         <FiCheckCircle className="registration-select-circle" />
                       ) : (
-                          <FiCircle className="registration-select-circle" />
-                        )}
+                        <FiCircle className="registration-select-circle" />
+                      )}
                       <p>女性</p>
                     </label>
                     <input
@@ -268,8 +268,8 @@ const Registration = (props) => {
                       {gender === "man" ? (
                         <FiCheckCircle className="registration-select-circle" />
                       ) : (
-                          <FiCircle className="registration-select-circle" />
-                        )}
+                        <FiCircle className="registration-select-circle" />
+                      )}
                       <p>男性</p>
                     </label>
                   </div>
