@@ -158,7 +158,7 @@ const AccountModify = (props) => {
         userDistrict: districts,
         userAddress: address,
         userPostCode: postCode,
-        userBirthday: selectedDate.toLocaleDateString().split("/").join("-"),
+        userBirthday: selectedDate.toLocaleDateString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit' })
       };
 
       //   console.log(data);
